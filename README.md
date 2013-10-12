@@ -7,5 +7,4 @@ Super simple banner system.
 
 ## Usage
 - Navigate to the site in your browser 
-- Eg. www.example.com/PocketMine-Banners/bg<style number>.php?host=<ip address>&port=<port>&name=<servername>
-- Styles-1 or 2
+- Eg. www.example.com/PocketMine-Banners/bg<style number>.php?host=<ip address>&ampport=<port>&ampname=<servername>
