@@ -4,6 +4,7 @@ Super simple banner system.
 
 ## Installation
 - Self Explanatory, Move these files into a folder on your web server
+- php-gd and php is required for this to work
 
 ## Usage
 - Navigate to the site in your browser 
