@@ -3,7 +3,7 @@
 // Query code for PocketMine Banners
 
 define('SERVEROK',    0);
-define('SERVERDOWN',    1);
+define('SERVER_DOWN',    1);
 define('SERVERINVALID',  2);
 define('UNKNOWN_ERROR',  3);
 define('TIMEOUT',        1);
@@ -57,7 +57,7 @@ function UT3QueryServer($host,$port,&$return)
     	$port = 19132;
 	}
     $values = '';
-    $returnvalue = UT3QueryServer($host,$port,&$values);
+    $returnvalue = UT3QueryServer($host,$port,$values);
     if($returnvalue != SERVEROK){
         $ostatus = 2;
     }else{
@@ -65,17 +65,8 @@ function UT3QueryServer($host,$port,&$return)
         $maxplayers    = $values['maxplayers'];
         $hostname      = $values['hostname'];
         $percent = (((int)$currentplayers / (int)$maxplayers)*100);
-        if($percent >= 75){
-        	$status=danger;
-        }
-        else if($percent >= 50){
-        	$status=warning;
-        }
-        else{
-        	$status=success;
-        }
+
         // echo $percent;
         $ostatus = 1;
         // echo 'Players: '.$currentplayers.'/'.$maxplayers.'<br><br>';
     }
-?>
